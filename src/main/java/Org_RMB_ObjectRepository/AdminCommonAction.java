@@ -14,61 +14,68 @@ public class AdminCommonAction
 {
 	@FindBy(xpath="//input[@name='viewdet']")
 	private WebElement ViewActiveCustomerButton;
-	
+
 	@FindBy(xpath="//input[@name='view_cust_by_ac']")
 	private WebElement ViewCustomerbyAccountNoButton;
-	
+
 	@FindBy(xpath="//input[@name='apprvac']")
 	private WebElement ApprovePendingAcountButton;
-	
+
 	@FindBy(xpath="//input[@name='del_cust']")
 	private WebElement DeleteCustomerButton;
-	
+
 	@FindBy(xpath="//input[@name='credit_cust_ac']")
 	private WebElement CreditCustomerButton;
-	
+
 	@FindBy(xpath="//input[@name='home']")
 	private WebElement AdminHomeButton;
-	
+
 	@FindBy(xpath="//input[@name='logout_btn']")
 	private WebElement AdminLogoutButton;
-	
+
 	public AdminCommonAction(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
-	
+
+	/**
+	 * This method is developed to click on viewactive customer button
+	 * @param driver
+	 */
 	public void viewActiveCustomerButton()
 	{
 		ViewActiveCustomerButton.click();
 	}
 	
+	/**
+	 * This method is developed to click on viewcustomer by account number button
+	 */
 	public void viewCustomerbyAccountNoButton()
 	{
 		ViewCustomerbyAccountNoButton.click();
 	}
-	
+
 	public void approvePendingAcountButton()
 	{
-		 ApprovePendingAcountButton.click();
+		ApprovePendingAcountButton.click();
 	}
 	public void deleteCustomerButton()
 	{
 		DeleteCustomerButton.click();
 	}
-	
+
 	public void creditCustomerButton()
 	{
 		CreditCustomerButton.click();
 	}
-	
-	
-	
+
+
+
 	public void adminHomeButton()
 	{
 		AdminHomeButton.click();
 	}
-	
+
 	public void adminLogoutButton()
 	{
 		AdminLogoutButton.click();

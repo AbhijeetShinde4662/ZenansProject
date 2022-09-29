@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" thread-count="3" name="Suite">
+<listeners>
+<listener class-name="Org.GenericUtility.ListenerImplementation"></listener>
+<listener class-name="Org.GenericUtility.RetryToListener"></listener>
+</listeners>
+  <test thread-count="5" parallel="classes" name="Test">
+    <classes>
+      <class name="Org_Automation_Test_NG.DeleteCustomerTest"/>
+      <class name="Org_Automation_Test_NG.AccountOpeningTest"/>
+      <class name="Org_Automation_Test_NG.DebitCardTest"/>
+      <class name="Org_Automation_Test_NG.CreditCustomerTest"/>
+      <class name="Org_Automation_Test_NG.InternetBankingTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

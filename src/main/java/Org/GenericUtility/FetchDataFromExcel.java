@@ -1,7 +1,6 @@
 package Org.GenericUtility;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -51,11 +50,20 @@ public class FetchDataFromExcel
 	public  String getDataFromExcel(String sheet, int rowno, int cellno)  
 	{
 		DataFormatter dataFormatter =new DataFormatter();
-		org.apache.poi.ss.usermodel.Sheet sheetname = book.getSheet(sheet);
+		Sheet sheetname = book.getSheet(sheet);
 		String value = dataFormatter.formatCellValue(sheetname.getRow(rowno).getCell(cellno));
 
 		return value;
 	}
+
+	public  void getmultipleDataFromExcel(String sheet)  
+	{
+		DataFormatter dataFormatter =new DataFormatter();
+		Sheet sheetname = book.getSheet(sheet);
+		String[][] arr= new String[][];
+	}
+
+
 
 	/**
 	 * This method is used to fetch data from excel in Map
